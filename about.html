@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavana M | About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* ====== Base ====== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #A8FBD3;
+      color: #31326F;
+    }
+
+    /* ====== Header ====== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background-color: #4FB7B3;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      color: #31326F;
+    }
+
+    header h1 span {
+      color: #637AB9;
+    }
+
+    /* ====== Navigation ====== */
+    nav {
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      color: #31326F;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #637AB9;
+    }
+
+    /* ====== Hamburger ====== */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      color: #31326F;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ====== About Section ====== */
+    .about-section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #31326F;
+    }
+
+    .experience-counter {
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: rgba(99, 122, 185, 0.1);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(49, 50, 111, 0.2);
+      color: #31326F;
+      font-weight: 600;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      background-color: rgba(99, 122, 185, 0.1);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(49, 50, 111, 0.2);
+      color: #31326F;
+    }
+
+    .about-text a {
+      color: #637AB9;
+      text-decoration: underline;
+    }
+
+    .about-text a:hover {
+      color: #31326F;
+    }
+
+    .download-btn {
+      background-color: #e4df9a;
+      color: #ffffff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      display: inline-block;
+      border: none;
+      transition: 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #31326F;
+      color: #ffffff;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4FB7B3;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      nav a {
+        margin: 1rem 0;
+        font-size: 1rem;
+        color: #31326F;
+      }
+
+      nav.active {
+        max-height: 300px; /* expands the slider */
+        padding: 1rem 0;
+      }
+
+      .about-section {
+        padding: 2rem 1rem;
+      }
+
+      .about-section h2 {
+        font-size: 2rem;
+      }
+
+      .about-text {
+        font-size: 1rem;
+      }
+
+      .download-btn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>Bhavana M</span> | About</h1>
+    <button class="hamburger" id="menu-btn"><i class="fas fa-bars"></i></button>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>About Me</h2>
+
+    <div class="experience-counter" id="experience-counter">
+      <!-- Experience days counter will be injected here -->
+    </div>
+
+    <div class="about-text">
+      <p>Hello! I'm <strong>Bhavana M</strong>, an Embedded Software Engineer with a strong passion for building real-world systems that combine hardware and software seamlessly. With a background in Electronics and Communication Engineering (ECE), I specialize in developing embedded applications using C, Embedded C, and Python.</p>
+
+      <p>I have hands-on experience with microcontrollers like <strong>ESP32</strong> and <strong>STM32</strong>, and I'm proficient in working with <strong>RTOS, device drivers</strong>, and <strong>real-time data processing</strong>. My toolkit includes a solid foundation in <strong>Linux systems</strong>, <strong>networking concepts</strong>, and tools for edge AI development.</p>
+
+      <p>I’m actively involved in projects related to embedded AI, signal processing, and automation. Whether it's low-level driver development or integrating real-time sensors with cloud/edge systems, I enjoy solving tough problems and bringing ideas to life through code.</p>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://drive.google.com/file/d/1mvEA2RmpE96iMd4xXa9soXpsk3Ribuj9/view?usp=sharing" 
+           download class="download-btn">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ====== Experience Counter ======
+    const startDate = new Date('2024-08-10T00:00:00');
+
+    function calculateExperience() {
+      const now = new Date();
+      if (now < startDate) {
+        document.getElementById('experience-counter').textContent = 'Experience start date is in the future.';
+        return;
+      }
+
+      let years = now.getFullYear() - startDate.getFullYear();
+      let months = now.getMonth() - startDate.getMonth();
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const expString = `Experience: ${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''} as Embedded Engineer`;
+      document.getElementById('experience-counter').textContent = expString;
+    }
+
+    calculateExperience();
+
+    // ====== Mobile Menu Toggle ======
+    const menuBtn = document.getElementById("menu-btn");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      menuBtn.innerHTML = navMenu.classList.contains("active")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+</body>
+</html>

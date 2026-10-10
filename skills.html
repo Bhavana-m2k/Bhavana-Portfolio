@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yugandhar K | Skills</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #A8FBD3;
+      color: #31326F;
+    }
+
+    /* ====== Header ====== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background-color: #4FB7B3;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      color: #31326F;
+    }
+
+        header h1 span {
+      color: #637AB9;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #31326F;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #31326F;
+    }
+
+    /* ---------- Hamburger ---------- */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ---------- Skills Section ---------- */
+    .skills-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .skills-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #31326F;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-card {
+      background: #ffffff80;
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid #4FB7B3;
+      box-shadow: 0 0 10px rgba(99, 122, 185, 0.2);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(99, 122, 185, 0.5);
+    }
+
+    .skill-card i {
+      font-size: 2.5rem;
+      color: #637AB9;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1.2rem;
+      color: #31326F;
+      margin: 0;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4FB7B3;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 1000;
+        padding: 1rem 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 0.8rem 2rem;
+        text-align: center;
+        color: white;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Yugandhar K | Skills</h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="skills-section">
+    <h2>My Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fas fa-code"></i><h3>C Programming</h3></div>
+      <div class="skill-card"><i class="fas fa-microchip"></i><h3>Embedded C</h3></div>
+      <div class="skill-card"><i class="fas fa-microchip"></i><h3>ESP32, STM32</h3></div>
+      <div class="skill-card"><i class="fas fa-terminal"></i><h3>Linux</h3></div>
+      <div class="skill-card"><i class="fas fa-network-wired"></i><h3>Networking</h3></div>
+      <div class="skill-card"><i class="fab fa-python"></i><h3>Python</h3></div>
+      <div class="skill-card"><i class="fas fa-microchip"></i><h3>Device Drivers</h3></div>
+      <div class="skill-card"><i class="fas fa-chart-line"></i><h3>Real-time Data</h3></div>
+      <div class="skill-card"><i class="fas fa-robot"></i><h3>RTOS</h3></div>
+      <div class="skill-card"><i class="fas fa-laptop-code"></i><h3>Embedded Tools</h3></div>
+      <div class="skill-card"><i class="fas fa-cloud"></i><h3>Edge AI</h3></div>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
